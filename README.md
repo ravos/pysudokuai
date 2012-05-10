@@ -1,0 +1,4 @@
+pysudokuai
+==========
+
+Python Sudoku AI
