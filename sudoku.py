@@ -45,7 +45,7 @@ class SudokuBoard:
 	#load board from file: fn_puzzle
 	def loadBoard(self, fn_puzzle = None):
 		self.board = self.parseBoard(fn_puzzle)
-		self.gridList = [sudokuGrid(self.gridSize,i,self.board[i/9][i%9],self.surface) for i in range(81)]
+		self.gridList = [sudokuGrid(self.gridSize,i,self.board[i//9][i%9],self.surface) for i in range(81)]
 		self.displayBoard()
 		
 
