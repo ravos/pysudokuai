@@ -119,11 +119,11 @@ class SudokuBoard:
 				# C = show/hide Candidates
 				elif key == 99:
 					if self.gridList[0].showCandidates == True:
-						print 'Hide candidates'
+						print('Hide candidates')
 						self.setShowCandidates(False)
 						self.displayBoard()
 					else:
-						print 'Show candidates'
+						print('Show candidates')
 						self.setShowCandidates(True)
 						self.displayBoard()
 
