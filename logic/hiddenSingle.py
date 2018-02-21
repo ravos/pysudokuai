@@ -18,7 +18,7 @@ def hiddenSingle(self, getOne = False):
 					if num in self.gridList[i].candidates:
 						self.hints.append(hint('Hidden Single', 1, [self.gridList[i].row, self.gridList[i].col], num))
 						ifFound = True
-						print 'Found 1 at (',self.gridList[i].row+1,',',self.gridList[i].col+1,')'
+						print('Found 1 at (',self.gridList[i].row+1,',',self.gridList[i].col+1,')')
 						if getOne:
 							return ifFound
 
@@ -32,7 +32,7 @@ def hiddenSingle(self, getOne = False):
 					if num in self.gridList[i].candidates:
 						self.hints.append(hint('Hidden Single', 1, [self.gridList[i].row, self.gridList[i].col], num))
 						ifFound = True
-						print 'Found 1 at (',self.gridList[i].row+1,',',self.gridList[i].col+1,')'
+						print('Found 1 at (',self.gridList[i].row+1,',',self.gridList[i].col+1,')')
 						if getOne:
 							return ifFound
 
@@ -46,7 +46,7 @@ def hiddenSingle(self, getOne = False):
 					if num in self.gridList[i].candidates:
 						self.hints.append(hint('Hidden Single', 1, [self.gridList[i].row, self.gridList[i].col], num))
 						ifFound = True
-						print 'Found 1 at (',self.gridList[i].row+1,',',self.gridList[i].col+1,')'
+						print('Found 1 at (',self.gridList[i].row+1,',',self.gridList[i].col+1,')')
 						if getOne:
 							return ifFound
 
