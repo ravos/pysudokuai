@@ -17,11 +17,7 @@ from hiddenSingle 	import hiddenSingle
 class SudokuBoard:
 	#initialize the sudokuboard
 	def __init__(self,fn_puzzle = None):
-	#	print "constructing"
 		self.gameOn = True
-		
-		
-		
 		#initialize the grids
 		        
 		self.name = ''
@@ -61,7 +57,7 @@ class SudokuBoard:
 			#print board_content
 			#['0' for elem in [board_line for board_line in board_content] if elem == '.']
 			board_content = [board_line[0:9].replace('.','0') for board_line in board_content[0:9]]
-			print board_content
+			print(board_content)
 			temp_board = [[int(num) for num in line] for line in board_content]
 		else:
 			temp_board = [[0 for i in range(9)] for j in range(9)]
@@ -107,7 +103,7 @@ class SudokuBoard:
 					self.focus = tempPos
 					self.gridList[self.focus].selected = 1
 				else:
-					print event
+					print(event)
 				self.displayBoard()
 
 			elif event.type == KEYDOWN:
@@ -134,7 +130,7 @@ class SudokuBoard:
 				# H = hints
 				elif key == 104:
 					for hint in self.hints:
-						print hint.name, hint.row, hint.col, hint.num
+						print(hint.name, hint.row, hint.col, hint.num)
 
 				# E = eliminate candidates
 				elif key == 101:
@@ -176,10 +172,10 @@ class SudokuBoard:
 
 				# ESC/Ctrl+Q = Exit
 				elif key == 27 or (key == 113 and (pygame.key.get_mods() & KMOD_CTRL)):
-					print 'Exit game. Godd bye!'
+					print('Exiting. Godd bye!')
 					self.gameOn = False
 					break
 				else:
-					print key
+					print(key)
 					continue
 			
