@@ -31,9 +31,9 @@ class SudokuBoard:
 		self.box = [[],[],[],[],[],[],[],[],[]]
 		
 		for i in range(81):
-			self.row[i/9].append(i)
+			self.row[i//9].append(i)
 			self.col[i%9].append(i)
-			self.box[(i/9)/3*3 + i%9/3].append(i)
+			self.box[(i//9)//3*3 + i%9//3].append(i)
 		
 		self.surface = pygame.display.get_surface()
 		self.loadBoard(fn_puzzle)
