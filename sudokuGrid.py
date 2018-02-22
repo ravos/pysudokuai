@@ -8,11 +8,11 @@ class sudokuGrid:
 	def __init__(self,size,ind,tempNum,Screen):
 		
 		self.ind = ind		# ind = 9*row+column
-		self.row = ind / 9	# row = row#
+		self.row = ind // 9	# row = row#
 		self.col = ind % 9	# col = column#
-		self.box = (self.row / 3) * 3 + self.col / 3
-		self.posX = self.col * size + (self.col / 3) * 1
-		self.posY = self.row * size + (self.row / 3) * 1
+		self.box = (self.row // 3) * 3 + self.col // 3
+		self.posX = self.col * size + (self.col // 3) * 1
+		self.posY = self.row * size + (self.row // 3) * 1
  		
 		self.fixed = False
 		if tempNum:
@@ -38,7 +38,7 @@ class sudokuGrid:
 		else :
 			self.tempNum = num
 			if num == 0:
-				self.candidates = range(1,10)
+				self.candidates = list(range(1,10))
 			else:
 				self.candidates = []
 

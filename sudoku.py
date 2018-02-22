@@ -95,7 +95,7 @@ class SudokuBoard:
 					self.displayBoard()
 
 				elif event.button == 1:
-					(g_row,g_col) = (grid_pos[1]/self.gridSize,grid_pos[0]/self.gridSize)
+					(g_row,g_col) = (grid_pos[1]//self.gridSize,grid_pos[0]//self.gridSize)
 					tempPos = 9*g_row + g_col
 					
 					if self.focus is not -1:
@@ -161,7 +161,7 @@ class SudokuBoard:
 				# Ctrl+L = Load Board
 				elif key == 108:
 					if pygame.key.get_mods() & KMOD_CTRL:
-						self.name = raw_input('The filename of the puzzle: ')
+						self.name = input('The filename of the puzzle: ')
 						fn_puzzle = 'puzzle/q' + self.name + '.txt'
 						self.loadBoard(fn_puzzle)
 
@@ -170,8 +170,8 @@ class SudokuBoard:
 					if pygame.key.get_mods() & KMOD_CTRL:
 						self.loadBoard()
 
-				# ESC/Ctrl+Q = Exit
-				elif key == 27 or (key == 113 and (pygame.key.get_mods() & KMOD_CTRL)):
+				# Ctrl+ESC/Ctrl+Q = Exit
+				elif pygame.key.get_mods() & KMOD_CTRL and (key == 27 or key == 113):
 					print('Exiting. Godd bye!')
 					self.gameOn = False
 					break
